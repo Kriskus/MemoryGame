@@ -16,6 +16,8 @@ set(PROJECT_SOURCES
         main.cpp
         mainwindow.h mainwindow.cpp mainwindow.ui
         card.h card.cpp
+        deck.h deck.cpp
+        graphics.h graphics.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
