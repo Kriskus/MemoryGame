@@ -1,0 +1,51 @@
+<RCC>
+    <qresource prefix="/disney">
+        <file>graphics/disney/1.png</file>
+        <file>graphics/disney/2.png</file>
+        <file>graphics/disney/3.png</file>
+        <file>graphics/disney/4.png</file>
+        <file>graphics/disney/5.png</file>
+        <file>graphics/disney/6.jpg</file>
+        <file>graphics/disney/7.jpg</file>
+        <file>graphics/disney/8.jpg</file>
+        <file>graphics/disney/9.png</file>
+        <file>graphics/disney/10.png</file>
+        <file>graphics/disney/11.png</file>
+        <file>graphics/disney/12.png</file>
+        <file>graphics/disney/13.png</file>
+        <file>graphics/disney/14.jpg</file>
+        <file>graphics/disney/15.jpg</file>
+        <file>graphics/disney/16.jpg</file>
+        <file>graphics/disney/17.jpg</file>
+        <file>graphics/disney/18.jpg</file>
+        <file>graphics/disney/19.jpg</file>
+        <file>graphics/disney/20.jpg</file>
+        <file>graphics/disney/21.jpg</file>
+        <file>graphics/disney/22.jpg</file>
+        <file>graphics/disney/23.png</file>
+        <file>graphics/disney/24.png</file>
+        <file>graphics/disney/25.png</file>
+        <file>graphics/disney/26.png</file>
+        <file>graphics/disney/27.png</file>
+        <file>graphics/disney/28.png</file>
+        <file>graphics/disney/29.png</file>
+    </qresource>
+    <qresource prefix="/frozen"/>
+    <qresource prefix="/pony"/>
+    <qresource prefix="/dragon"/>
+    <qresource prefix="/unicorn"/>
+    <qresource prefix="/background"/>
+    <qresource prefix="/covered">
+        <file>graphics/covered/covered.png</file>
+    </qresource>
+    <qresource prefix="/icon">
+        <file>graphics/icon/again.png</file>
+        <file>graphics/icon/cancel.png</file>
+        <file>graphics/icon/confirm.png</file>
+        <file>graphics/icon/highscore.png</file>
+        <file>graphics/icon/info.png</file>
+        <file>graphics/icon/pause.png</file>
+        <file>graphics/icon/play.png</file>
+        <file>graphics/icon/settings.png</file>
+    </qresource>
+</RCC>
