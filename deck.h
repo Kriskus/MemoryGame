@@ -13,10 +13,20 @@ class Deck : public QObject
 public:
     explicit Deck(int deckSize);
 
-    void createDeck();
-    void shuffleDeck();
-    QList<QSharedPointer<Card>> getdeck();
+public slots:
+    QList<Card*> getdeck();
 
+private:
+    QList<Card*> deck_{};
+    QList<QString> graphicFiles_{};
+    int cardNr{0};
+    int deckSize_{0};
+    QPixmap coveredImage_{};
+    QPixmap uncoveredImage_{};
+
+private slots:
+    void createDeck();
+    QList<QString> shuffleDeck(QList<QString> data);
     void prepareGraphics();
 
 signals:
