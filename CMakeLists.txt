@@ -18,6 +18,8 @@ set(PROJECT_SOURCES
         card.h card.cpp
         deck.h deck.cpp
         graphics.h graphics.cpp
+
+        graphics.qrc
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
