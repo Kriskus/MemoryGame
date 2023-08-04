@@ -2,35 +2,35 @@
 
 #include <QDir>
 
-graphics::graphics()
+Graphics::Graphics()
 {
 
 }
 
-QList<QString> graphics::readGraphics()
+QList<QString> Graphics::readGraphics()
 {
     graphicFiles_.clear();
-    QDir graphicsDir(":/graphics/" + graphicsDirectory_ + "/");
+    QDir graphicsDir(graphicsDirectory_);
     QStringList fileNames = graphicsDir.entryList(QDir::Files);
     for (const QString& fileName : fileNames) {
         graphicFiles_.append(fileName);
     }
-    emit sendGraphicFiles(graphicFiles_);
+    return graphicFiles_;
 }
 
-void graphics::setCurrentGraphicsDirectory(int graphicsType)
+void Graphics::setCurrentGraphicsDirectory(int graphicsType)
 {
     switch (graphicsType) {
     case 0:
-        graphicsDirectory_ = "disney"; break;
+        graphicsDirectory_ = ":/graphics/disney/"; break;
     case 1:
-        graphicsDirectory_ = "frozen"; break;
+        graphicsDirectory_ = ":/graphics/frozen/"; break;
     case 2:
-        graphicsDirectory_ = "pony"; break;
+        graphicsDirectory_ = ":/graphics/pony/"; break;
     case 3:
-        graphicsDirectory_ = "unicorn"; break;
+        graphicsDirectory_ = ":/graphics/unicorn/"; break;
     case 4:
-        graphicsDirectory_ = "dragon"; break;
+        graphicsDirectory_ = ":/graphics/dragon/"; break;
     default:
         break;
     }

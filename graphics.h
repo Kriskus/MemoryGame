@@ -5,11 +5,11 @@
 #include <QObject>
 #include <qstring.h>
 
-class graphics
+class Graphics : public QObject
 {
     Q_OBJECT
 public:
-    graphics();
+    Graphics();
 
 public slots:
     QList<QString> readGraphics();
@@ -19,8 +19,6 @@ private:
     QString graphicsDirectory_{};
     QList<QString> graphicFiles_{};
 
-signals:
-    void sendGraphicFiles(QList<QString>);
 };
 
 #endif // GRAPHICS_H
