@@ -26,6 +26,12 @@ public slots:
 private:
     QPixmap coveredImage_{};
     QPixmap uncoveredImage_{};
+
+signals:
+    void clicked(Card* card);
+
+protected:
+    void mousePressEvent(QMouseEvent *event);
 };
 
 #endif // CARD_H

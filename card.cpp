@@ -43,3 +43,9 @@ int Card::getNumber()
 {
     return objectName().toInt();
 }
+
+void Card::mousePressEvent(QMouseEvent *event)
+{
+    Q_UNUSED(event);
+    emit clicked(this);
+}
