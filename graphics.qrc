@@ -71,16 +71,16 @@
         <file>graphics/icon/settings.png</file>
     </qresource>
     <qresource prefix="/pawpatrol">
-        <file>graphics/pawpatrol/chase.webp</file>
-        <file>graphics/pawpatrol/coral.webp</file>
-        <file>graphics/pawpatrol/everest.webp</file>
-        <file>graphics/pawpatrol/liberty.webp</file>
-        <file>graphics/pawpatrol/marshall.webp</file>
-        <file>graphics/pawpatrol/rex.webp</file>
-        <file>graphics/pawpatrol/rocky.webp</file>
-        <file>graphics/pawpatrol/rubble.webp</file>
-        <file>graphics/pawpatrol/ryder.webp</file>
-        <file>graphics/pawpatrol/sky.webp</file>
-        <file>graphics/pawpatrol/zuma.webp</file>
+        <file>graphics/pawpatrol/chase.png</file>
+        <file>graphics/pawpatrol/coral.png</file>
+        <file>graphics/pawpatrol/everest.png</file>
+        <file>graphics/pawpatrol/liberty.png</file>
+        <file>graphics/pawpatrol/marshall.png</file>
+        <file>graphics/pawpatrol/rex.png</file>
+        <file>graphics/pawpatrol/rocky.png</file>
+        <file>graphics/pawpatrol/rubble.png</file>
+        <file>graphics/pawpatrol/ryder.png</file>
+        <file>graphics/pawpatrol/sky.png</file>
+        <file>graphics/pawpatrol/zuma.png</file>
     </qresource>
 </RCC>
