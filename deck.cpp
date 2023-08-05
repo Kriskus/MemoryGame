@@ -1,18 +1,27 @@
 #include "deck.h"
+#include "graphics.h"
+
+#include <random>
+#include <algorithm>
 
 Deck::Deck(int deckSize)
     : deckSize_(deckSize)
 {
+    Graphics graphics;
+    graphicFiles_ = graphics.readGraphics();
+
+    coveredImage_.load(":/covered/graphics/covered/covered.png");
+
     prepareGraphics();
-    createDeck();
+    createDeck();    
 }
 
 void Deck::createDeck()
 {
     for(cardNr = 0; cardNr < deckSize_; cardNr++) {
-
-        Card* card = new Card(cardNr); //, coveredImage_, uncoveredImage_
-        card->setText(QString::number(cardNr));
+        uncoveredImage_.load(cardImages_[cardNr]);
+        Card* card = new Card(cardNr, coveredImage_, uncoveredImage_);
+        connect(card, &Card::clicked, card, &Card::uncoverCard);
         deck_.push_back(card);
     }
 }

@@ -9,6 +9,8 @@ Card::Card(int cardNr, const QPixmap &coveredImage, const QPixmap &uncoveredImag
     setFrameStyle(0);
     setAlignment(Qt::AlignCenter);
 
+    setCardSize(150, 150);
+
     coverCard();
 }
 

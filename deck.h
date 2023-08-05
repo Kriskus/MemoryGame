@@ -19,10 +19,12 @@ public slots:
 private:
     QList<Card*> deck_{};
     QList<QString> graphicFiles_{};
+    QList<QString> cardImages_{};
     int cardNr{0};
     int deckSize_{0};
     QPixmap coveredImage_{};
     QPixmap uncoveredImage_{};
+
 
 private slots:
     void createDeck();
