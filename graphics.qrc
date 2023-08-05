@@ -30,11 +30,33 @@
         <file>graphics/disney/28.png</file>
         <file>graphics/disney/29.png</file>
     </qresource>
-    <qresource prefix="/frozen"/>
-    <qresource prefix="/pony"/>
-    <qresource prefix="/dragon"/>
-    <qresource prefix="/unicorn"/>
-    <qresource prefix="/background"/>
+    <qresource prefix="/frozen">
+        <file>graphics/frozen/Zrzut ekranu 2023-08-05 094058.png</file>
+        <file>graphics/frozen/Zrzut ekranu 2023-08-05 094107.png</file>
+        <file>graphics/frozen/Zrzut ekranu 2023-08-05 094119.png</file>
+        <file>graphics/frozen/Zrzut ekranu 2023-08-05 094127.png</file>
+        <file>graphics/frozen/Zrzut ekranu 2023-08-05 094150.png</file>
+        <file>graphics/frozen/Zrzut ekranu 2023-08-05 094159.png</file>
+        <file>graphics/frozen/Zrzut ekranu 2023-08-05 094206.png</file>
+        <file>graphics/frozen/Zrzut ekranu 2023-08-05 094214.png</file>
+        <file>graphics/frozen/Zrzut ekranu 2023-08-05 094220.png</file>
+    </qresource>
+    <qresource prefix="/pony">
+        <file>graphics/pony/Zrzut ekranu 2023-08-05 092249.png</file>
+        <file>graphics/pony/Zrzut ekranu 2023-08-05 092333.png</file>
+        <file>graphics/pony/Zrzut ekranu 2023-08-05 092341.png</file>
+        <file>graphics/pony/Zrzut ekranu 2023-08-05 092406.png</file>
+        <file>graphics/pony/Zrzut ekranu 2023-08-05 092413.png</file>
+        <file>graphics/pony/Zrzut ekranu 2023-08-05 092419.png</file>
+        <file>graphics/pony/Zrzut ekranu 2023-08-05 092428.png</file>
+        <file>graphics/pony/Zrzut ekranu 2023-08-05 092434.png</file>
+        <file>graphics/pony/Zrzut ekranu 2023-08-05 092442.png</file>
+        <file>graphics/pony/Zrzut ekranu 2023-08-05 092603.png</file>
+    </qresource>
+    <qresource prefix="/background">
+        <file>graphics/background/back_1.png</file>
+        <file>graphics/background/back_2.png</file>
+    </qresource>
     <qresource prefix="/covered">
         <file>graphics/covered/covered.png</file>
     </qresource>
@@ -47,5 +69,18 @@
         <file>graphics/icon/pause.png</file>
         <file>graphics/icon/play.png</file>
         <file>graphics/icon/settings.png</file>
+    </qresource>
+    <qresource prefix="/pawpatrol">
+        <file>graphics/pawpatrol/chase.webp</file>
+        <file>graphics/pawpatrol/coral.webp</file>
+        <file>graphics/pawpatrol/everest.webp</file>
+        <file>graphics/pawpatrol/liberty.webp</file>
+        <file>graphics/pawpatrol/marshall.webp</file>
+        <file>graphics/pawpatrol/rex.webp</file>
+        <file>graphics/pawpatrol/rocky.webp</file>
+        <file>graphics/pawpatrol/rubble.webp</file>
+        <file>graphics/pawpatrol/ryder.webp</file>
+        <file>graphics/pawpatrol/sky.webp</file>
+        <file>graphics/pawpatrol/zuma.webp</file>
     </qresource>
 </RCC>
