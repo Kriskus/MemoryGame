@@ -26,8 +26,19 @@ private:
     int columns_{0};
     int rows_{0};
 
+    QList<Card*> cards_;
+    QList<Card*> selectedCards_;
+
 private slots:
-    setColumns(int amount);
-    setRows(int amount);
+    void createBoardGame();
+    void clearBoardGame();
+
+    void newGame();
+    void endGame();
+
+    bool checkOfGameEnd();
+
+    void setColumns(int amount);
+    void setRows(int amount);
 };
 #endif // MAINWINDOW_H
