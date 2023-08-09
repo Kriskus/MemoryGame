@@ -1,15 +1,16 @@
 #include "deck.h"
-#include "graphics.h"
 
 #include <random>
 #include <algorithm>
 
-Deck::Deck(int deckSize)
+Deck::Deck(int deckSize, QSize cardSize, int graphicsType)
     : deckSize_(deckSize)
+    , cardSize_(cardSize)
 {
-    Graphics graphics;
-    graphicFiles_ = graphics.readGraphics();
+    graphics_ = new Graphics();
+    graphics_->setCurrentGraphicsDirectory(graphicsType);
 
+    setGraphicsType(graphicsType);
     coveredImage_.load(":/covered/graphics/covered/covered.png");
 
     prepareGraphics();
@@ -20,8 +21,7 @@ void Deck::createDeck()
 {
     for(cardNr = 0; cardNr < deckSize_; cardNr++) {
         uncoveredImage_.load(cardImages_[cardNr]);
-        Card* card = new Card(cardNr, coveredImage_, uncoveredImage_);
-        connect(card, &Card::clicked, card, &Card::uncoverCard);
+        Card* card = new Card(cardNr, coveredImage_, uncoveredImage_, cardSize_);
         deck_.push_back(card);
     }
 }
@@ -37,6 +37,11 @@ QList<QString> Deck::shuffleDeck(QList<QString> data)
 QList<Card*> Deck::getdeck()
 {
     return deck_;
+}
+
+void Deck::setGraphicsType(int graphicsType)
+{
+    graphicFiles_ = graphics_->readGraphics();
 }
 
 void Deck::prepareGraphics()

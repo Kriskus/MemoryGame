@@ -2,6 +2,7 @@
 #define DECK_H
 
 #include "card.h"
+#include "graphics.h"
 
 #include <QList>
 #include <QObject>
@@ -11,10 +12,12 @@ class Deck : public QObject
 {
     Q_OBJECT
 public:
-    explicit Deck(int deckSize);
+    explicit Deck(int deckSize, QSize cardSize, int graphicsType);
 
 public slots:
     QList<Card*> getdeck();
+
+    void setGraphicsType(int graphicsType);
 
 private:
     QList<Card*> deck_{};
@@ -24,7 +27,9 @@ private:
     int deckSize_{0};
     QPixmap coveredImage_{};
     QPixmap uncoveredImage_{};
+    QSize cardSize_{};
 
+    Graphics* graphics_;
 
 private slots:
     void createDeck();
