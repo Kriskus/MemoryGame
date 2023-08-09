@@ -2,9 +2,10 @@
 
 LabelButton::LabelButton(QString name, QString pixmap)
 {
-    setFixedSize(200,200);
+    setFixedSize(300,300);
     QPixmap image;
     image.load(pixmap);
+    setPixmap(image.scaled(300,300, Qt::IgnoreAspectRatio));
     setObjectName(name);
 }
 
