@@ -1,15 +1,15 @@
 #include "card.h"
 
-Card::Card(int cardNr, const QPixmap &coveredImage, const QPixmap &uncoveredImage)
+Card::Card(int cardNr, const QPixmap &coveredImage, const QPixmap &uncoveredImage, QSize cardSize)
     : coveredImage_(coveredImage)
     , uncoveredImage_(uncoveredImage)
 {
+    setFixedSize(cardSize);
     setObjectName(QString::number(cardNr));
     setStyleSheet("");
-    setFrameStyle(0);
     setAlignment(Qt::AlignCenter);
 
-    setCardSize(150, 150);
+    setCardSize(cardSize.width(), cardSize.height());
 
     coverCard();
 }
@@ -21,12 +21,12 @@ void Card::setCardSize(int width, int height)
 
 void Card::coverCard()
 {
-    setPixmap(coveredImage_.scaled(size(), Qt::KeepAspectRatio));
+    setPixmap(coveredImage_.scaled(size(), Qt::IgnoreAspectRatio));
 }
 
 void Card::uncoverCard()
 {
-    setPixmap(uncoveredImage_.scaled(size(), Qt::KeepAspectRatio));
+    setPixmap(uncoveredImage_.scaled(size(), Qt::IgnoreAspectRatio));
 }
 
 void Card::deactivateCard()
@@ -34,6 +34,7 @@ void Card::deactivateCard()
     clear();
     setStyleSheet("");
     setFrameStyle(0);
+    setDisabled(1);
 }
 
 QImage Card::getImage()

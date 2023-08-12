@@ -10,7 +10,7 @@ class Card : public QLabel
 {
     Q_OBJECT
 public:
-    Card(int cardNr, const QPixmap &coveredImage, const QPixmap &uncoveredImage);
+    Card(int cardNr, const QPixmap &coveredImage, const QPixmap &uncoveredImage, QSize cardSize);
 
 public slots:
     void setCardSize(int width, int height);
