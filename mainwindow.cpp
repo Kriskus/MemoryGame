@@ -16,7 +16,6 @@ MainWindow::MainWindow(QWidget *parent)
     setRows(4);
 
     QRect screenGeometry = QGuiApplication::primaryScreen()->availableGeometry();
-
     cardSize_.setWidth(screenGeometry.width() * 0.6 / columns_);
     cardSize_.setHeight(screenGeometry.height() * 0.9 / rows_);
 
@@ -69,6 +68,35 @@ void MainWindow::endGame()
     clearBoardGame();
     createBoardGame();
     selectedCards_.clear();
+}
+
+void MainWindow::setClickedCard(QObject *obj)
+{
+    if (isFirstClick_) {
+        startTimer();
+        isFirstClick_ = false;
+    }
+
+    if (selectedCards_.size() < 2) {
+        Card *card = qobject_cast<Card*>(obj);
+        if (card) {
+            card->uncoverCard();
+            card->setStyleSheet("background-color: green;");
+            selectedCards_.append(card);
+            updateMoves();
+            if (selectedCards_.size() == 2) {
+                checkSelectedCards();
+            }
+        }
+    }
+}
+
+{
+    emit endTimer();
+    isFirstClick_ = true;
+    moves_ = 0;
+    clearBoardGame();
+    createBoardGame();
 }
 
 void MainWindow::setClickedCard(QObject *obj)
