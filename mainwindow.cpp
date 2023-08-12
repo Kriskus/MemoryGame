@@ -68,6 +68,7 @@ void MainWindow::endGame()
     moves_ = 0;
     clearBoardGame();
     createBoardGame();
+    selectedCards_.clear();
 }
 
 void MainWindow::setClickedCard(QObject *obj)
@@ -175,11 +176,17 @@ void MainWindow::setRows(int amount)
 void MainWindow::openSettings()
 {
     Settings* settingWindow = new Settings();
+    settingWindow->setModal(1);
+    this->setEnabled(0);
     connect(settingWindow, &Settings::graphicsType, [this](int type) {
         graphicsType_ = type;
         endGame();
+        this->setEnabled(1);
     });
-    connect(settingWindow, &Settings::closeWindow, settingWindow, &Settings::deleteLater);
+    connect(settingWindow, &Settings::closeWindow, [this, settingWindow]() {
+        this->setEnabled(1);
+        settingWindow->deleteLater();
+    });
     settingWindow->show();
 }
 
