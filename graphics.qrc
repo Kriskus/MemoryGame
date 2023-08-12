@@ -83,4 +83,19 @@
         <file>graphics/pawpatrol/sky.png</file>
         <file>graphics/pawpatrol/zuma.png</file>
     </qresource>
+    <qresource prefix="/animal">
+        <file>graphics/animal/1.png</file>
+        <file>graphics/animal/2.png</file>
+        <file>graphics/animal/3.png</file>
+        <file>graphics/animal/4.png</file>
+        <file>graphics/animal/5.png</file>
+        <file>graphics/animal/6.png</file>
+        <file>graphics/animal/7.png</file>
+        <file>graphics/animal/8.png</file>
+        <file>graphics/animal/9.png</file>
+        <file>graphics/animal/10.png</file>
+        <file>graphics/animal/11.png</file>
+        <file>graphics/animal/12.png</file>
+        <file>graphics/animal/13.png</file>
+    </qresource>
 </RCC>
