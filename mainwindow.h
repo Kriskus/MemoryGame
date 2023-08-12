@@ -2,8 +2,10 @@
 #define MAINWINDOW_H
 
 #include "deck.h"
+#include "settings.h"
 
 #include <QMainWindow>
+#include <QTimer>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -22,23 +24,47 @@ public slots:
 
 private:
     Ui::MainWindow *ui;
+    QTimer* timer_{};
 
     int columns_{0};
     int rows_{0};
+    QSize cardSize_{0,0};
+
+    int moves_{0};
+    int seconds_{0};
+    int minutes_{0};
+
+    bool isFirstClick_{true};
+    bool isCheckingCards_{false};
+    bool isHandlingClick_{false};
 
     QList<Card*> cards_;
     QList<Card*> selectedCards_;
+
+    int graphicsType_{1};
 
 private slots:
     void createBoardGame();
     void clearBoardGame();
 
-    void newGame();
     void endGame();
 
-    bool checkOfGameEnd();
+    void setClickedCard(QObject *obj);
+    bool checkCards(Card *labelOne, Card *labelTwo);
+    void checkSelectedCards();
 
+    void updateTime();
+    void updateMoves();
+
+    void checkOfGameEnd();
+
+    void startTimer();
     void setColumns(int amount);
     void setRows(int amount);
+
+    void openSettings();
+
+signals:
+    void endTimer();
 };
 #endif // MAINWINDOW_H
