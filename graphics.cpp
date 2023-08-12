@@ -29,6 +29,8 @@ void Graphics::setCurrentGraphicsDirectory(int graphicsType)
         graphicsDirectory_ = ":/pony/graphics/pony/"; break;
     case 3:
         graphicsDirectory_ = ":/pawpatrol/graphics/pawpatrol/"; break;
+    case 4:
+        graphicsDirectory_ = ":/animal/graphics/animal/"; break;
     default:
         break;
     }
