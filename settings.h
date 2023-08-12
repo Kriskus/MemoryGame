@@ -1,6 +1,7 @@
 #ifndef SETTINGS_H
 #define SETTINGS_H
 
+#include <QCloseEvent>
 #include <QDialog>
 
 namespace Ui {
@@ -17,6 +18,7 @@ public:
 
 private:
     Ui::Settings *ui;
+    void closeEvent(QCloseEvent *event);
 
 private slots:
     void setGraphics(int type);

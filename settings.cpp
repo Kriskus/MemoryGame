@@ -32,6 +32,12 @@ Settings::~Settings()
     delete ui;
 }
 
+void Settings::closeEvent(QCloseEvent *event)
+{
+    Q_UNUSED(event);
+    emit closeWindow();
+}
+
 void Settings::setGraphics(int type)
 {
     emit graphicsType(type);
